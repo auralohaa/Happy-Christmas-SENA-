@@ -1,0 +1,268 @@
+/* Definición de la fuentes */
+@font-face {
+    font-family: 'bless';
+    src: url(texto/RoughSerif-ALjqA.ttf);
+}
+
+@font-face {
+    font-family: 'ornament';
+    src: url(texto/ChristmasOrnaments-1Gn0L.ttf);
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    background: url('img/backgroundPage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    background-color: antiquewhite;
+}
+
+.flex-container {
+    width: 100%;
+}
+
+
+/* Estilos para los botones de navegación */
+.button {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: 'ornament';
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+
+/* Estilos adicionales para el texto dentro de los botones */
+.button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+
+/* Efecto de sombra al pasar el ratón sobre los botones */
+.button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para la imagen dentro de los botones */
+.button img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+/* Efecto de cambio de color al pasar el ratón sobre el texto de los botones */
+.button:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+
+
+/* Estilos para el botón de color rosa */
+.pink a {
+    text-decoration: none;
+    color: rgb(255, 182, 193);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(78, 38, 38);
+}
+
+/* Efecto de sombra al pasar el ratón sobre el botón rosa */
+.pink:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto de cambio de color al pasar el ratón sobre el texto del botón rosa */
+.pink:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.pink {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.pink::before {
+    content: '';
+    background-image: url('img/niña.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Estilos para el botón de color azul */
+.blue a {
+    text-decoration: none;
+    color: rgb(182, 232, 255);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(38, 73, 78);
+}
+
+
+/* LO MISMOOOOOOO */
+.blue:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.blue:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.blue {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.blue::before {
+    content: '';
+    background-image: url('img/niño.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+/* Estilos para el contenedor de la imagen y el texto */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 7rem); /* aquí resté la altura de los botones superiores */
+    position: relative; /* Necesario para posicionar los botones correctamente */
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Estilos para el contenedor de la dedicatoria */
+.dedication-container {
+    max-width: 40%; 
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-right: 150px; 
+    position: fixed;
+    right: 0;
+}
+
+
+/* Estilos para el texto de la dedicatoria */
+.dedication-text {
+    font-family: 'bless';
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    /* Efecto de sombra y contorno al texto */
+    text-shadow: 
+        0 0 10px white,
+        0 0 10px white,
+        10px 0 10px white, 
+        -10px 0 10px white; 
+    max-width: 100%; 
+}
+
+
+
+/* Estilos para el contenedor de los botones de interacción */
+.button-container {
+    position: absolute;
+    display: flex;
+    gap: 10px; 
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%); /* lo usé para centrar horizontalmente el contenedor de botones (button-container) dentro de su contenedor padre. 
+    Esto desplaza el contenedor en un 50% de su propio ancho hacia la izquierda, logrando un centrado preciso. */
+}
+
+
+
+/* Estilos para los botones de interacción */
+.button-container button {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 60px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
+/* Estilos específicos para el botón rojo */
+.button-container button.red {
+    color: #FF0000;
+    border-color: #FF0000;
+    font-size: 60px; 
+}
+
+
+/* Estilos para el botón verde */
+.button-container button.green {
+    color: #4CAF50;
+}
+
+/* Efecto de cambio de color al pasar el ratón sobre los botones */
+.button-container button:hover {
+    background-color: #4CAF50; 
+    color: white; 
+    border-color: #fff; 
+}
+
+.button-container button.red {
+    color: #FF0000; 
+    border-color: #FF0000; 
+}
+
+
+/* Efecto de cambio de color al pasar el ratón sobre el botón rojo */
+.button-container button.red:hover {
+    background-color: #FF0000; 
+    color: white; 
+    border-color: #fff; 
+}

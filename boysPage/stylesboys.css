@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'bless';
+    src: url(texto/RoughSerif-ALjqA.ttf);
+}
+
+@font-face {
+    font-family: 'ornament';
+    src: url(texto/ChristmasOrnaments-1Gn0L.ttf);
+}
+
+body {
+    background: url('img/backgroundPage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    background-color: antiquewhite;
+}
+
+.flex-container {
+    width: 100%;
+}
+
+
+
+.button {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: 'ornament';
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+
+.button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.button:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.pink a {
+    text-decoration: none;
+    color: rgb(255, 182, 193);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(78, 38, 38);
+}
+
+.pink:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pink:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.pink {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.pink::before {
+    content: '';
+    background-image: url('img/niña.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.blue a {
+    text-decoration: none;
+    color: rgb(182, 232, 255);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(38, 73, 78);
+}
+
+.blue:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.blue:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.blue {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.blue::before {
+    content: '';
+    background-image: url('img/niño.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 7rem); /* Resta la altura de los botones superiores */
+    position: relative; /* Necesario para posicionar los botones correctamente */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.dedication-container {
+    max-width: 40%; 
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-right: 150px; 
+    position: fixed;
+    right: 0;
+}
+
+.dedication-text {
+    font-family: 'bless';
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+        0 0 10px white,
+        0 0 10px white,
+        10px 0 10px white, 
+        -10px 0 10px white; 
+    max-width: 100%; 
+}
+
+
+.button-container {
+    position: absolute;
+    display: flex;
+    gap: 10px; 
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-container button {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 60px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
+.button-container button.red {
+    color: #FF0000;
+    border-color: #FF0000;
+    font-size: 60px; 
+}
+
+
+.button-container button.green {
+    color: #4CAF50;
+}
+
+.button-container button:hover {
+    background-color: #4CAF50; 
+    color: white; 
+    border-color: #fff; 
+}
+
+.button-container button.red {
+    color: #FF0000; 
+    border-color: #FF0000; 
+}
+
+
+.button-container button.red:hover {
+    background-color: #FF0000; 
+    color: white; 
+    border-color: #fff; 
+}

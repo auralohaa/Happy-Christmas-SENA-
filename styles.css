@@ -1,0 +1,463 @@
+/* FUENTES DE LA PÁGINA */
+@font-face {
+    font-family: 'bless';
+    src: url(texto/ChristmasBlessPersonalUse-4BMAD.ttf);
+}
+
+@font-face {
+    font-family: 'ornament';
+    src: url(texto/ChristmasOrnaments-1Gn0L.ttf);
+}
+
+
+/* ESTOS SON LOS ETILOS GENERALES DEL CUERPO DE LA PÁGINA */
+body {
+    background: url('img/backgroundPage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    background-color: antiquewhite;
+}
+
+.flex-container {
+    width: 100%;
+}
+
+
+/* ESTILOS PARA BOTONES */
+.button {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: 'ornament';
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+.luz-button {
+    height: 340px;
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+}
+
+.festivity-button {
+    font-family: 'bless'; 
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+/* ESTILOS PARA ENLACES DENTRO DE BOTONES */
+.button a,
+.festivity-button a,
+.bola-button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+
+/* EFECTOS DE HOVER EN BOTONES */
+.button:hover,
+.festivity-button:hover,
+.bola-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ESTILOS PARA IMÁGENES DENTRO DE BOTONES */
+.button img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+
+
+
+/* EFECTOS DE HOVER EN ENLACES DENTRO DE BOTONES - Estilos aplicados a los enlaces dentro de los botones cuando el mouse está sobre ellos. */
+.button:hover a,
+.festivity-button:hover a,
+.bola-button:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+
+
+/* ESTILOS PARA UN FONDO CON EFECTOS (EJEMPLO: CLASE .pink) - Estilos aplicados al contenido antes del elemento con la clase 'pink'. */
+.pink a {
+    text-decoration: none;
+    color: rgb(255, 182, 193);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(78, 38, 38);
+}
+
+
+/* ESTILOS PARA EL CONTENIDO DE UN FONDO CON EFECTOS */
+.pink:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pink:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.pink {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.pink::before {
+    content: '';
+    background-image: url('img/niña.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* OTROS COLORES Y EFECTOS DE FONDO SIMILARES... */
+.blue a {
+    text-decoration: none;
+    color: rgb(182, 232, 255);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgb(38, 73, 78);
+}
+
+.blue:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.blue:hover a {
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.blue {
+    background-color: rgb(255, 182, 193);
+    position: relative;
+    z-index: 1;
+}
+
+.blue::before {
+    content: '';
+    background-image: url('img/niño.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.yellow {
+    position: relative;
+}
+
+.yellow::before {
+    content: '';
+    background-image: url('img/velitas.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.yellow a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7), /* Sombra suave en la parte superior */
+        0 0 5px rgba(255, 255, 255, 0.7), /* Sombra suave en la parte inferior */
+        5px 0 5px rgba(255, 255, 255, 0.7), /* Sombra suave a la derecha */
+        -5px 0 5px rgba(255, 255, 255, 0.7); /* Sombra suave a la izquierda */
+}
+
+.yellow:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.yellow:hover a {
+    color: rgb(252, 252, 173);
+    text-shadow: 
+        0 0 10px black, /* Sombra más pronunciada en el contorno */
+        0 0 10px black,
+        0 0 10px black,
+        0 0 10px black;
+}
+
+
+
+
+.green {
+    position: relative;
+}
+
+.green::before {
+    content: '';
+    background-image: url('img/noche.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.green a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 5px rgba(255, 255, 255, 0.7),
+        5px 0 5px rgba(255, 255, 255, 0.7),
+        -5px 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.green:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.green:hover a {
+    color: rgb(138, 243, 178);
+    text-shadow: 
+        0 0 10px black,
+        0 0 10px black,
+        0 0 10px black,
+        0 0 10px black;
+}
+
+
+
+.red {
+    position: relative;
+}
+
+.red::before {
+    content: '';
+    background-image: url('img/añoNuevo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.red a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 5px rgba(255, 255, 255, 0.7),
+        5px 0 5px rgba(255, 255, 255, 0.7),
+        -5px 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.red:hover::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.red:hover a {
+    color: rgb(255, 139, 139);
+    text-shadow: 
+        0 0 10px black,
+        0 0 10px black,
+        0 0 10px black,
+        0 0 10px black;
+}
+
+
+
+
+/* ESTILOS PARA EL SLIDER */
+.slider {
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider::before {
+    content: '';
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+.slider::after {
+    content: '';
+    background-image: url('img/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255))
+}
+
+
+/* Estilos aplicados al contenido del segundo slider. */
+.slider2-content {
+    background-color: rgb(13, 44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* .slider2-content h2, .slider2-content p: Estos los usé como estilos aplicados a los títulos y párrafos dentro del contenido del segundo slider. */
+.slider2-content h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider2-content p {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* ESTILOS PARA LA SECCIÓN DE EDICIÓN DE IMÁGENES DENTRO DE LUCES - Estilos aplicados al contenedor de botones redondos (luz).*/
+.luz-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* .luz-button: son los estilos aplicados a los botones redondos.
+   .luz-button img: Estilos aplicados a las imágenes dentro de los botones redondos....*/
+   .luz-button {
+    justify-content: center;
+    height: 25rem;
+    width: 64rem;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden; /* Oculta el contenido que sobresale del círculo */
+    transition: box-shadow 0.3s; /* Agrega una transición suave al efecto de sombreado */
+}
+
+.luz-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Sombra negra al posarse sobre el botón */
+}
+
+.luz-button img {
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    transform-origin: center; /* Define el punto de origen de la transformación */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* TRANSFORMACIONES ESPECIALES DE ESCALA PARA ALGUNAS BOLAS - Se aplican transformaciones de escala a algunas bolas para crear efectos visuales específicos. */
+.luz-button:nth-child(2),
+.luz-button:nth-child(4),
+.luz-button:nth-child(5) {
+    transform: scaleX(-1);
+}
+
+.luz-button:nth-child(1),
+.luz-button:nth-child(3),
+.luz-button:nth-child(5) {
+    transform: scaleX(1);
+}
+
+
+/* pseudo-clase ':nth-child' para seleccionar elementos específicos dentro de un contenedor y aplicarles transformaciones de escala horizontal (scaleX).
+ La función scaleX(-1) invierte el elemento horizontalmente, mientras que scaleX(1) no realiza ninguna inversión.
+En este caso, parece estar diseñado para lograr un efecto visual particular al voltear algunas de las bolas horizontalmente y dejar otras sin invertir */
+
+/*  Luz 1: No invertir.
+    Luz 2: Invertir horizontalmente.
+    Luz 3: No invertir.
+    Luz 4: Invertir horizontalmente.
+    Luz 5: Invertir horizontalmente. */
+
+    
